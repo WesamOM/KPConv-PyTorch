@@ -86,7 +86,7 @@ class S3DISDataset(PointCloudDataset):
         self.ignored_labels = np.array([])
 
         # Dataset folder
-        self.path = r'C:\Users\WOmran\KPConv-PyTorch-master\S3DIS Sample Dataset\Stanford3dDataset_v1.2'
+        self.path = '../../Data/S3DIS'
 
         # Type of task conducted on this dataset
         self.dataset_task = 'cloud_segmentation'
@@ -111,8 +111,7 @@ class S3DISDataset(PointCloudDataset):
         ply_path = join(self.path, self.train_path)
 
         # Proportion of validation scenes
-        # self.cloud_names = ['Area_1', 'Area_2', 'Area_3', 'Area_4', 'Area_5', 'Area_6']
-        self.cloud_names = ['Area_1']
+        self.cloud_names = ['Area_1', 'Area_2', 'Area_3', 'Area_4', 'Area_5', 'Area_6']
         self.all_splits = [0, 1, 2, 3, 4, 5]
         self.validation_split = 4
 
